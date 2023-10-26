@@ -1,0 +1,53 @@
+
+
+
+<link rel="stylesheet" href="/css/student.css">
+
+
+<div class="form-body">
+    <div class="row">
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <h3> Student Interview Details</h3>
+                    <p>Fill in the data below.</p>
+                    <form class="requires-validation" action="/interview/create" method="post">
+
+                        
+
+                       <div class="col-md-12" >
+                            
+                             <select name="student" class="form-select mt-3" required >
+                                    <option selected> Student Email</option> 
+                                   <%  for(let i=0;i<student.length;i++){%>
+                                        <option value="<%=student[i].id%>"><%=student[i].email%></option>
+                                    <% }%>
+                                </select>
+                    
+                       </div>
+
+
+                       <div class="col-md-12">
+                          
+                          <input type="text"  required="true" name="company" placeholder="Enter the company name">
+                       </div>
+                       <div class="col-md-12">
+                        <input type="date" required="true" name="date" placeholder="Enter the date">
+                       
+                     </div>
+
+                     
+
+                      
+              
+
+                        <div class="form-button mt-3">
+                            <button id="submit" type="submit" class="btn btn-primary">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

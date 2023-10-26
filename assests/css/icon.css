@@ -1,0 +1,24 @@
+.icon{
+    display: flex;
+    gap: 40px;
+    font-size: 20px;
+    margin-top: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.icon a::before{
+    content: '';
+    position: absolute;
+    border: 1px solid black;
+    width: 35px;
+    height: 35px;
+    top: -35%;
+    border-radius: 100%;
+   
+    left:-3%
+  
+}
+ i:hover{
+    cursor: pointer;
+}

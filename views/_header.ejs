@@ -1,0 +1,26 @@
+<nav class="menu2">
+    <% if(locals.user){%>
+      
+            <div class="logOut">
+                 <a href="/"><small>Home</small></a>
+                <a href="/student/addstudent"> <small>Add student</small> </a>
+                <a href="/student/detail"> <small>Student Details</small> </a>
+                <a href="/interview/addstudent"> <small>Interview Details</small> </a>
+                <a href="/user/downloadcsv"> <small> CSV </small> </a>
+                <a href="/job"> <small> Job portal </small> </a>
+                <a href="/user/detroysession"> <small>LogOut </a> </small>
+                <span class="nameOfUser">
+                    <%= locals.user.name%>
+                </span>
+            </div>
+
+            
+                    <%}else{%>
+                        <div class="logOut">
+                            <a href="/user/signin">Sign In</a>
+                            <a href="/user/signup">Sign Up</a>
+
+                        </div>
+
+                        <%}%>
+</nav>

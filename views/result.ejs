@@ -1,0 +1,42 @@
+
+
+
+<link rel="stylesheet" href="/css/student.css">
+<div class="form-body">
+    <div class="row">
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <h3>Add Student</h3>
+                    <p>Fill in the data below.</p>
+                    <form class="requires-validation" action="/user/resultcreate" method="post">
+                           <input type="hidden" value="<%=interview.id%>" name="interview">
+                          <div class="col-md-12">
+                           <input class="form-control" type='text' name="name" value="<%=interview.student.name%>" required>
+                          </div>
+
+                          <input type="hidden" value="<%=interview.student.id%>" name="stdid">
+                      
+
+                       <div class="col-md-12" >
+                            <select class="form-select mt-3"  name="result" required>
+                                  <option selected disabled>Result</option>
+                                  <option value="Pass">Pass</option>
+                                  <option value="Fail">Fail</option>
+                                  <option value="On Hold">On Hold</option>
+                                  <option value="Didn’t Attempt">Didn't Attempt</option>
+                                  
+                           </select>
+                    
+                       </div>
+
+
+                        <div class="form-button mt-3">
+                            <button id="submit" type="submit" class="btn btn-primary">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
